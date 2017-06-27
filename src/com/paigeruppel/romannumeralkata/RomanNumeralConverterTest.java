@@ -75,6 +75,16 @@ public class RomanNumeralConverterTest {
 		Assert.assertEquals(1000, response);
 	}
 	
+	@Test 
+	public void shouldReturn1FromIWithRefactoredMultiMethod() {
+		//arrange
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		//act
+		int response = underTest.convertMultiCharacterToDigit("I");
+		//assert
+		Assert.assertEquals(1, response);
+	}
+	
 //	@Test
 //	public void shouldReturn2FromII() {
 //		//arrange

@@ -9,7 +9,7 @@ public class RomanNumeralConverter {
 	public int convertSingleCharacterToDigit(String input) {
 		int converted = 0;
 		char[] inputArray = input.toCharArray();
-		
+
 		Map<Character, Integer> numeralValues = new HashMap<>();
 		numeralValues.put('I', 1);
 		numeralValues.put('V', 5);
@@ -61,4 +61,28 @@ public class RomanNumeralConverter {
 	// return numeralValues;
 	// }
 
+	public int convertMultiCharacterToDigit(String input) {
+		int converted = 0;
+		char[] inputArray = input.toCharArray();
+		
+		int[] rawValues = new int[inputArray.length];
+		
+		Map<Character, Integer> numeralValues = new HashMap<>();
+		numeralValues.put('I', 1);
+		numeralValues.put('V', 5);
+		numeralValues.put('X', 10);
+		numeralValues.put('L', 50);
+		numeralValues.put('C', 100);
+		numeralValues.put('D', 500);
+		numeralValues.put('M', 1000);
+		
+		for (int i = 0; i < inputArray.length; i++) {
+			rawValues[i] = numeralValues.get(inputArray[i]);
+	}
+		if (rawValues.length == 1) {
+			converted = rawValues[0];
+		}
+		return converted;
+	}
+	
 }
