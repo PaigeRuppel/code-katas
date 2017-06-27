@@ -9,6 +9,7 @@ public class RomanNumeralConverter {
 	public int convertSingleCharacterToDigit(String input) {
 		int converted = 0;
 		char[] inputArray = input.toCharArray();
+		
 		Map<Character, Integer> numeralValues = new HashMap<>();
 		numeralValues.put('I', 1);
 		numeralValues.put('V', 5);
@@ -18,7 +19,14 @@ public class RomanNumeralConverter {
 		numeralValues.put('D', 500);
 		numeralValues.put('M', 1000);
 
-		Character indexValue = inputArray[0];
+		if (inputArray.length == 1) {
+			Character index0Value = inputArray[0];
+			switch (index0Value) {
+			case 'I':
+				converted = numeralValues.get('I');
+				break;
+			}
+		}
 		if (input.equals("I")) {
 			converted = numeralValues.get('I');
 		}
