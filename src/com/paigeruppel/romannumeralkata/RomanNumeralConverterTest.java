@@ -10,7 +10,7 @@ public class RomanNumeralConverterTest {
 		//arrange
 		RomanNumeralConverter underTest = new RomanNumeralConverter();
 		//act
-		int response = underTest.convertSingleCharacterToDigit("I");
+		int response = underTest.convertRomanNumeralsToDigit("I");
 		//assert
 		Assert.assertEquals(1, response);
 	}
@@ -20,7 +20,7 @@ public class RomanNumeralConverterTest {
 		//arrange
 		RomanNumeralConverter underTest = new RomanNumeralConverter();
 		//act
-		int response = underTest.convertSingleCharacterToDigit("V");
+		int response = underTest.convertRomanNumeralsToDigit("V");
 		//assert
 		Assert.assertEquals(5, response);
 	}
@@ -30,7 +30,7 @@ public class RomanNumeralConverterTest {
 		//arrange
 		RomanNumeralConverter underTest = new RomanNumeralConverter();
 		//act
-		int response = underTest.convertSingleCharacterToDigit("X");
+		int response = underTest.convertRomanNumeralsToDigit("X");
 		//assert
 		Assert.assertEquals(10, response);
 	}
@@ -40,7 +40,7 @@ public class RomanNumeralConverterTest {
 		//arrange
 		RomanNumeralConverter underTest = new RomanNumeralConverter();
 		//act
-		int response = underTest.convertSingleCharacterToDigit("L");
+		int response = underTest.convertRomanNumeralsToDigit("L");
 		//assert
 		Assert.assertEquals(50, response);
 	}
@@ -50,7 +50,7 @@ public class RomanNumeralConverterTest {
 		//arrange
 		RomanNumeralConverter underTest = new RomanNumeralConverter();
 		//act
-		int response = underTest.convertSingleCharacterToDigit("C");
+		int response = underTest.convertRomanNumeralsToDigit("C");
 		//assert
 		Assert.assertEquals(100, response);
 	}
@@ -60,7 +60,7 @@ public class RomanNumeralConverterTest {
 		//arrange
 		RomanNumeralConverter underTest = new RomanNumeralConverter();
 		//act
-		int response = underTest.convertSingleCharacterToDigit("D");
+		int response = underTest.convertRomanNumeralsToDigit("D");
 		//assert
 		Assert.assertEquals(500, response);
 	}
@@ -70,20 +70,11 @@ public class RomanNumeralConverterTest {
 		//arrange
 		RomanNumeralConverter underTest = new RomanNumeralConverter();
 		//act
-		int response = underTest.convertSingleCharacterToDigit("M");
+		int response = underTest.convertRomanNumeralsToDigit("M");
 		//assert
 		Assert.assertEquals(1000, response);
 	}
 	
-	@Test 
-	public void shouldReturn1FromIWithRefactoredMultiMethod() {
-		//arrange
-		RomanNumeralConverter underTest = new RomanNumeralConverter();
-		//act
-		int response = underTest.convertMultiCharacterToDigit("I");
-		//assert
-		Assert.assertEquals(1, response);
-	}
 	
 //	@Test
 //	public void shouldReturn2FromII() {
