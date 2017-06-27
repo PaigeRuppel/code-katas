@@ -24,18 +24,18 @@ public class RomanNumeralConverter {
 		}
 
 		if (input.equals("V")) {
-			converted = 5;
+			converted = numeralValues.get('V');
 		}
 
 		if (input.equals("X")) {
-			converted = 10;
+			converted = numeralValues.get('X');
 		}
 		if (input.equals("L")) {
-			converted = 50;
+			converted = numeralValues.get('L');
 		}
 
 		if (input.equals("C")) {
-			converted = 100;
+			converted = numeralValues.get('C');
 		}
 		return converted;
 	}

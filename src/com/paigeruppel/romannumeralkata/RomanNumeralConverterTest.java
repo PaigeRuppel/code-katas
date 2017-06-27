@@ -35,16 +35,6 @@ public class RomanNumeralConverterTest {
 		Assert.assertEquals(10, response);
 	}
 	
-//	@Test
-//	public void shouldReturn2FromII() {
-//		//arrange
-//		RomanNumeralConverter underTest = new RomanNumeralConverter();
-//		//act
-//		int response = underTest.convertMultiCharacterToDigit("II");
-//		//assert
-//		Assert.assertEquals(2, response);
-//	}
-	
 	@Test
 	public void shouldReturn50FromL() {
 		//arrange
@@ -65,5 +55,24 @@ public class RomanNumeralConverterTest {
 		Assert.assertEquals(100, response);
 	}
 	
+	@Test
+	public void shouldReturn500FromD() {
+		//arrange
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		//act
+		int response = underTest.convertSingleCharacterToDigit("D");
+		//assert
+		Assert.assertEquals(500, response);
+	}
+	
+//	@Test
+//	public void shouldReturn2FromII() {
+//		//arrange
+//		RomanNumeralConverter underTest = new RomanNumeralConverter();
+//		//act
+//		int response = underTest.convertMultiCharacterToDigit("II");
+//		//assert
+//		Assert.assertEquals(2, response);
+//	}
 	
 }
