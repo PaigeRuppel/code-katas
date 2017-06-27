@@ -17,7 +17,7 @@ public class RomanNumeralConverter {
 		numeralValues.put('C', 100);
 		numeralValues.put('D', 500);
 		numeralValues.put('M', 1000);
-		
+
 		Character indexValue = inputArray[0];
 		if (input.equals("I")) {
 			converted = numeralValues.get('I');
@@ -37,19 +37,27 @@ public class RomanNumeralConverter {
 		if (input.equals("C")) {
 			converted = numeralValues.get('C');
 		}
+
+		if (input.equals("D")) {
+			converted = numeralValues.get('D');
+		}
+
+		if (input.equals("M")) {
+			converted = numeralValues.get('M');
+		}
 		return converted;
 	}
-	
-//	public Map<Character, Integer> numeralList() {
-//		Map<Character, Integer> numeralValues = new HashMap<>();
-//		numeralValues.put('I', 1);
-//		numeralValues.put('V', 5);
-//		numeralValues.put('X', 10);
-//		numeralValues.put('L', 50);
-//		numeralValues.put('C', 100);
-//		numeralValues.put('D', 500);
-//		numeralValues.put('M', 1000);
-//		return numeralValues;
-//	}
+
+	// public Map<Character, Integer> numeralList() {
+	// Map<Character, Integer> numeralValues = new HashMap<>();
+	// numeralValues.put('I', 1);
+	// numeralValues.put('V', 5);
+	// numeralValues.put('X', 10);
+	// numeralValues.put('L', 50);
+	// numeralValues.put('C', 100);
+	// numeralValues.put('D', 500);
+	// numeralValues.put('M', 1000);
+	// return numeralValues;
+	// }
 
 }

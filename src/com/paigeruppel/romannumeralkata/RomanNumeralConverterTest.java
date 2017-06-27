@@ -65,6 +65,16 @@ public class RomanNumeralConverterTest {
 		Assert.assertEquals(500, response);
 	}
 	
+	@Test
+	public void shouldReturn1000FromM() {
+		//arrange
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		//act
+		int response = underTest.convertSingleCharacterToDigit("M");
+		//assert
+		Assert.assertEquals(1000, response);
+	}
+	
 //	@Test
 //	public void shouldReturn2FromII() {
 //		//arrange
