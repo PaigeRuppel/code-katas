@@ -76,14 +76,14 @@ public class RomanNumeralConverterTest {
 	}
 	
 	
-//	@Test
-//	public void shouldReturn2FromII() {
-//		//arrange
-//		RomanNumeralConverter underTest = new RomanNumeralConverter();
-//		//act
-//		int response = underTest.convertMultiCharacterToDigit("II");
-//		//assert
-//		Assert.assertEquals(2, response);
-//	}
+	@Test
+	public void shouldReturn2FromII() {
+		//arrange
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		//act
+		int response = underTest.convertRomanNumeralsToDigit("II");
+		//assert
+		Assert.assertEquals(2, response);
+	}
 	
 }

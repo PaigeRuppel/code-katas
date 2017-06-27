@@ -27,6 +27,15 @@ public class RomanNumeralConverter {
 		}
 		if (rawValues.length == 1) {
 			converted = rawValues[0];
+		} else {
+			for (int after = 1; after < rawValues.length; after++) {
+				int before = 0;
+				int sum = rawValues[0];
+				if (rawValues[after] <= rawValues[before]) {
+					sum = sum + rawValues[after];
+					converted = sum;
+				}
+			}
 		}
 		return converted;
 
