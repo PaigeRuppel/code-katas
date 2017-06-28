@@ -28,8 +28,15 @@ public class RomanNumeralConverter {
 		if (rawValues.length == 1) {
 			converted = rawValues[0];
 		} else if (rawValues.length != 1) {
-			for (int index = 0; index < rawValues.length; index++) {
-				converted = converted + rawValues[index];
+			converted = rawValues[0];
+			int first = 0;
+			for (int index = 1; index < rawValues.length; index++) {
+				if (rawValues[1] <= rawValues[0]) {
+					converted = converted + rawValues[index];
+					first++;
+				} else {
+					converted = rawValues[index] - converted;
+				}
 			}
 		}
 		return converted;
