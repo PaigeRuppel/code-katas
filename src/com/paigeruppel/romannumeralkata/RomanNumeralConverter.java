@@ -28,18 +28,20 @@ public class RomanNumeralConverter {
 		if (rawValues.length == 1) {
 			converted = rawValues[0];
 		} else if (rawValues.length != 1) {
-			int firstPosition = rawValues[0];
-			int convertAsc = firstPosition;
-			int convertDesc = 0;
+			int holder = rawValues[0];
 			int first = 0;
 			for (int index = 1; index < rawValues.length; index++) {
 				if (rawValues[index] <= rawValues[first]) {
-					convertAsc = convertAsc + rawValues[index];
-					converted = convertAsc;
+					holder = holder + rawValues[index];
+					converted = holder;
+					first++;
+				} else if (rawValues[index] > rawValues[first] && first == 0) {
+					holder = rawValues[index] - rawValues[first];
+					converted = holder; 
 					first++;
 				} else {
-					convertDesc = rawValues[index] - rawValues[first];
-					converted = converted + convertDesc; 
+					holder = (holder - rawValues[first])  + (rawValues[index] - rawValues[first]);
+					converted = holder;
 					first++;
 				}
 			}
