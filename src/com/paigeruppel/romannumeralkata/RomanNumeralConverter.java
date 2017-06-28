@@ -2,7 +2,6 @@ package com.paigeruppel.romannumeralkata;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class RomanNumeralConverter {
 
@@ -25,7 +24,7 @@ public class RomanNumeralConverter {
 		for (int i = 0; i < inputArray.length; i++) {
 			rawValues[i] = numeralValues.get(inputArray[i]);
 		}
-		
+
 		if (rawValues.length == 1) {
 			converted = rawValues[0];
 		} else if (rawValues.length != 1) {

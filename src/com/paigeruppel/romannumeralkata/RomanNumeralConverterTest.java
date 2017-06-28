@@ -103,4 +103,11 @@ public class RomanNumeralConverterTest {
 		Assert.assertEquals(20, response);
 	}
 	
+	@Test 
+	public void shouldReturn4FromIV() {
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		int response = underTest.convertRomanNumeralsToDigit("IV");
+		Assert.assertEquals(4, response);
+	}
+	
 }
