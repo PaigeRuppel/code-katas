@@ -25,16 +25,12 @@ public class RomanNumeralConverter {
 		for (int i = 0; i < inputArray.length; i++) {
 			rawValues[i] = numeralValues.get(inputArray[i]);
 		}
+		
 		if (rawValues.length == 1) {
 			converted = rawValues[0];
-		} else {
-			for (int after = 1; after < rawValues.length; after++) {
-				int before = 0;
-				int sum = rawValues[0];
-				if (rawValues[after] <= rawValues[before]) {
-					sum = sum + rawValues[after];
-					converted = sum;
-				}
+		} else if (rawValues.length != 1) {
+			for (int index = 0; index < rawValues.length; index++) {
+				converted = converted + rawValues[index];
 			}
 		}
 		return converted;

@@ -86,4 +86,21 @@ public class RomanNumeralConverterTest {
 		Assert.assertEquals(2, response);
 	}
 	
+	@Test
+	public void shouldReturn3FromIII() {
+		//arrange
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		//act
+		int response = underTest.convertRomanNumeralsToDigit("III");
+		//assert
+		Assert.assertEquals(3, response);
+	}
+	
+	@Test
+	public void shouldReturn20FromXX() {
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		int response = underTest.convertRomanNumeralsToDigit("XX");
+		Assert.assertEquals(20, response);
+	}
+	
 }
