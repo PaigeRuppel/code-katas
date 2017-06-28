@@ -35,19 +35,14 @@ public class RomanNumeralConverter {
 					holder = holder + rawValues[index];
 					converted = holder;
 					first++;
-				} else if (rawValues[index] > rawValues[first] && first == 0) {
-					holder = rawValues[index] - rawValues[first];
-					converted = holder; 
-					first++;
 				} else {
-					holder = (holder - rawValues[first])  + (rawValues[index] - rawValues[first]);
+					holder = (holder - rawValues[first]) + (rawValues[index] - rawValues[first]);
 					converted = holder;
 					first++;
 				}
 			}
 		}
 		return converted;
-
 	}
 
 	// public Map<Character, Integer> numeralList() {
