@@ -110,4 +110,12 @@ public class RomanNumeralConverterTest {
 		Assert.assertEquals(4, response);
 	}
 	
+	@Test
+	public void shouldReturn14FromXIV() {
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		int response = underTest.convertRomanNumeralsToDigit("XIV");
+		Assert.assertEquals(14, response);
+		
+	}
+	
 }
