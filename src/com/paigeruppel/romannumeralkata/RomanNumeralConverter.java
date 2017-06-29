@@ -10,6 +10,7 @@ public class RomanNumeralConverter {
 		int converted = 0;
 		char[] inputArray = input.toCharArray();
 
+		
 		int[] rawValues = new int[inputArray.length];
 
 		Map<Character, Integer> numeralValues = new HashMap<>();
@@ -42,17 +43,5 @@ public class RomanNumeralConverter {
 		}
 		return converted;
 	}
-
-	// public Map<Character, Integer> numeralList() {
-	// Map<Character, Integer> numeralValues = new HashMap<>();
-	// numeralValues.put('I', 1);
-	// numeralValues.put('V', 5);
-	// numeralValues.put('X', 10);
-	// numeralValues.put('L', 50);
-	// numeralValues.put('C', 100);
-	// numeralValues.put('D', 500);
-	// numeralValues.put('M', 1000);
-	// return numeralValues;
-	// }
 
 }

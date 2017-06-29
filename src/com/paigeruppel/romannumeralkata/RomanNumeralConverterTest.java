@@ -131,4 +131,20 @@ public class RomanNumeralConverterTest {
 		Assert.assertEquals(44, response);
 	}
 	
+	@Test
+	public void shouldReturn144FromCXLIV() {
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		int response = underTest.convertRomanNumeralsToDigit("CXLIV");
+		Assert.assertEquals(144, response);
+	}
+	
+	@Test
+	public void shouldReturn448FromCDXLVIII() {
+		RomanNumeralConverter underTest = new RomanNumeralConverter();
+		int response = underTest.convertRomanNumeralsToDigit("CDXLVIII");
+		Assert.assertEquals(448, response);
+	}
+	
+	
+	
 }
