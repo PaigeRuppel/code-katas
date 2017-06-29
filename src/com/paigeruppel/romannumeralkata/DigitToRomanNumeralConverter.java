@@ -13,6 +13,10 @@ public class DigitToRomanNumeralConverter {
 		digitConverter.put(5, 'V');
 		digitConverter.put(10, 'X');
 		digitConverter.put(50, 'L');
+		digitConverter.put(100, 'C');
+		digitConverter.put(500, 'D');
+		digitConverter.put(1000, 'M');
+		
 		return digitConverter.get(i).toString();
 	}
 

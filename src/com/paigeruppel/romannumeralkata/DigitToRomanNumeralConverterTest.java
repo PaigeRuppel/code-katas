@@ -32,4 +32,32 @@ public class DigitToRomanNumeralConverterTest {
 		String response =underTest.convertDigitToRomanNumerals(50);
 		Assert.assertEquals("L", response);
 	}
+	
+	@Test
+	public void shouldReturnCFrom100() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response =underTest.convertDigitToRomanNumerals(100);
+		Assert.assertEquals("C", response);
+	}
+	
+	@Test
+	public void shouldReturnDFrom500() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response =underTest.convertDigitToRomanNumerals(500);
+		Assert.assertEquals("D", response);
+	}
+	
+	@Test
+	public void shouldReturnMFrom1000() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response =underTest.convertDigitToRomanNumerals(1000);
+		Assert.assertEquals("M", response);
+	}
+	
+	@Test
+	public void shouldReturnXXFrom20() {
+			DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+			String response =underTest.convertDigitToRomanNumerals(20);
+			Assert.assertEquals("XX", response);
+	}
 }
