@@ -25,8 +25,8 @@ public class DigitToRomanNumeralConverter {
 			if (input == basicNumbers[i]) {
 				converted = digitConverter.get(basicNumbers[i]).toString();
 				break;
-			} else {
-				
+			} 
+
 				if (input < basicNumbers[1] - 1) {
 					String message = digitConverter.get(basicNumbers[0]).toString();
 					for (int times = 1; times <= input; times++) {
@@ -38,7 +38,7 @@ public class DigitToRomanNumeralConverter {
 					converted =  digitConverter.get(basicNumbers[0]).toString() +  digitConverter.get(basicNumbers[1]).toString();; 
 				}
 			}
-		}
+	
 
 		return converted;
 	}

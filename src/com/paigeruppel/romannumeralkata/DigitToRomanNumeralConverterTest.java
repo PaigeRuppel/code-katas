@@ -74,4 +74,11 @@ public class DigitToRomanNumeralConverterTest {
 			String response =underTest.convertDigitToRomanNumerals(4);
 			Assert.assertEquals("IV", response);
 	}
+	
+	@Test
+	public void shouldReturnVIfrom6() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response =underTest.convertDigitToRomanNumerals(6);
+		Assert.assertEquals("VI", response);
+	}
 }
