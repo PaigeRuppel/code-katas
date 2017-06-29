@@ -55,9 +55,16 @@ public class DigitToRomanNumeralConverterTest {
 	}
 	
 	@Test
-	public void shouldReturnXXFrom20() {
+	public void shouldReturnIIFrom2() {
 			DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
-			String response =underTest.convertDigitToRomanNumerals(20);
-			Assert.assertEquals("XX", response);
+			String response =underTest.convertDigitToRomanNumerals(2);
+			Assert.assertEquals("II", response);
+	}
+	
+	@Test
+	public void shouldReturnIIIFrom3() {
+			DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+			String response =underTest.convertDigitToRomanNumerals(3);
+			Assert.assertEquals("III", response);
 	}
 }
