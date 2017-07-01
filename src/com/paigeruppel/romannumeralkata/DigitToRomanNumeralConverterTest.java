@@ -69,16 +69,16 @@ public class DigitToRomanNumeralConverterTest {
 	}
 	
 	@Test
-	public void shouldReturnIIIFrom4() {
+	public void shouldReturnIVFrom4() {
 			DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
 			String response =underTest.convertDigitToRomanNumerals(4);
 			Assert.assertEquals("IV", response);
 	}
 	
 	@Test
-	public void shouldReturnVIfrom6() {
+	public void shouldReturnIXfrom9() {
 		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
-		String response =underTest.convertDigitToRomanNumerals(6);
-		Assert.assertEquals("VI", response);
+		String response =underTest.convertDigitToRomanNumerals(9);
+		Assert.assertEquals("IX", response);
 	}
 }

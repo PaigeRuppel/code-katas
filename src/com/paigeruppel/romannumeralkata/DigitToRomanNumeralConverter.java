@@ -21,26 +21,29 @@ public class DigitToRomanNumeralConverter {
 
 		int[] basicNumbers = { 1, 5, 10, 50, 100, 500, 1000 };
 
+		int j = 1;
+	
+		do {
+			if (input < basicNumbers[j] - 1) {
+				String message = digitConverter.get(basicNumbers[j - 1]).toString();
+				for (int times = 1; times <= input; times++) {
+					converted = converted + message;
+				}
+				break;
+			} else if (input == basicNumbers[j] - 1) {
+				converted = digitConverter.get(basicNumbers[0]).toString()
+						+ digitConverter.get(basicNumbers[j]).toString();
+				break;
+			}
+			j++;
+		} while (j < basicNumbers.length);
+
 		for (int i = 0; i < basicNumbers.length; i++) {
 			if (input == basicNumbers[i]) {
 				converted = digitConverter.get(basicNumbers[i]).toString();
 				break;
-			} 
-
-				if (input < basicNumbers[1] - 1) {
-					String message = digitConverter.get(basicNumbers[0]).toString();
-					for (int times = 1; times <= input; times++) {
-						converted = converted + message;
-					}
-					break;
-
-				} else if (input == basicNumbers[1] -1) {
-					converted =  digitConverter.get(basicNumbers[0]).toString() +  digitConverter.get(basicNumbers[1]).toString();; 
-				}
 			}
-	
-
+		}
 		return converted;
 	}
-
 }
