@@ -13,6 +13,9 @@ public class DigitToRomanNumeralConverter {
 			if (input == number(j)) {
 				converted = asString(j);
 				break;
+			} else if (input % number(j) == 5 && input > number(j)) {
+				converted = asString(j) + "V";
+				break;
 			} else if (input % number(j) == 0 && input > number(j)) {
 				int factor = input / number(j);
 				for (int count = 1; count <= factor; count++) {
