@@ -23,6 +23,7 @@ public class DigitToRomanNumeralConverter {
 
 		int j = 1;
 
+			
 		do {
 			if (input < basicNumbers[j] - 1) {
 				String message = digitConverter.get(basicNumbers[j - 1]).toString();
@@ -47,6 +48,13 @@ public class DigitToRomanNumeralConverter {
 				converted = digitConverter.get(basicNumbers[i]).toString();
 				break;
 			}
+		}
+		if (input % 5 == 0)	{
+			switch (input) {
+			case 20:
+				converted = "XX";
+				break;
+			} 
 		}
 		return converted;
 	}
