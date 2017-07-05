@@ -95,4 +95,19 @@ public class DigitToRomanNumeralConverterTest {
 		String response = underTest.convertDigitToRomanNumerals(20);
 		Assert.assertEquals("XX", response);
 	}
+	
+	@Test
+	public void shouldReturnCCfrom200() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response = underTest.convertDigitToRomanNumerals(200);
+		Assert.assertEquals("CC", response);
+	}
+	
+	@Test
+	public void shouldReturnXVfrom15() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response = underTest.convertDigitToRomanNumerals(15);
+		Assert.assertEquals("XV", response);
+
+	}
 }
