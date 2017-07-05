@@ -13,15 +13,24 @@ public class DigitToRomanNumeralConverter {
 			if (input == number(j)) {
 				converted = asString(j);
 				break;
-			} else if (input % number(j) == 5 && input > number(j)) {
-				converted = asString(j) + "V";
-				break;
-			} else if (input % number(j) == 0 && input > number(j)) {
+			} else if (input % number(j) == 0) {
 				int factor = input / number(j);
 				for (int count = 1; count <= factor; count++) {
-					converted = asString(j) + converted;
+					converted = converted + asString(j);
 				}
 				break;
+			} else if (input % number(j) == 5) {
+				if (input + 5 == number(j+1)) {
+					converted = "V" + asString(j+1);
+					break;
+				} else {
+				int factor = (input - 5) / number(j);
+				for (int count = 1; count <= factor; count++) {
+					converted = converted + asString(j);
+				}
+				converted = converted + "V";
+				break;
+				}
 			} else if (input == number(j) + 1) {
 				converted = asString(j) + "I";
 				break;
@@ -56,7 +65,7 @@ public class DigitToRomanNumeralConverter {
 	}
 
 	public static int number(int index) {
-		int[] basicNumbers = { 1, 5, 10, 50, 100, 500, 1000 };
+		int[] basicNumbers = { 1, 5, 10, 50, 100, 500, 1000, 0 };
 
 		return basicNumbers[index];
 	}

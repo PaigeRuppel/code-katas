@@ -108,6 +108,25 @@ public class DigitToRomanNumeralConverterTest {
 		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
 		String response = underTest.convertDigitToRomanNumerals(15);
 		Assert.assertEquals("XV", response);
-
+	}
+	
+	@Test
+	public void shouldRetrunXXVfrom25() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response = underTest.convertDigitToRomanNumerals(25);
+		Assert.assertEquals("XXV", response);
+	}
+	
+	@Test
+	public void shouldRetrunXXXVfrom35() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response = underTest.convertDigitToRomanNumerals(35);
+		Assert.assertEquals("XXXV", response);
+	}
+	@Test
+	public void shouldRetrunVLfrom45() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response = underTest.convertDigitToRomanNumerals(45);
+		Assert.assertEquals("VL", response);
 	}
 }
