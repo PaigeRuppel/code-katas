@@ -15,14 +15,8 @@ public class DigitToRomanNumeralConverter {
 				break;
 			} else if (input % number(j) == 0 && input > number(j)) {
 				int factor = input / number(j);
-				for (int count = 0; count < factor; count++) {
+				for (int count = 1; count <= factor; count++) {
 					converted = asString(j) + converted;
-				}
-				break;
-			} else if (input < number(j) - 1 && input > number(j - 1) + 1) {
-				String message = asString(j - 1);
-				for (int times = 1; times <= input; times++) {
-					converted = converted + message;
 				}
 				break;
 			} else if (input == number(j) + 1) {
