@@ -20,18 +20,22 @@ public class DigitToRomanNumeralConverter {
 				}
 				break;
 			} else if (input % number(j) == 5) {
-				if (input + 5 == number(j+1)) {
-					converted = "V" + asString(j+1);
+				if (input + 5 == number(j + 1)) {
+					converted = "V" + asString(j + 1);
 					break;
 				} else {
-				int factor = (input - 5) / number(j);
-				for (int count = 1; count <= factor; count++) {
-					converted = converted + asString(j);
+					int factor = (input - 5) / number(j);
+					for (int count = 1; count <= factor; count++) {
+						converted = converted + asString(j);
+					}
+					converted = converted + "V";
 				}
-				converted = converted + "V";
 				break;
-				}
-			} else if (input == number(j) + 1) {
+			} else if (input == number(j) + 6) {
+				converted = asString(j) + "VI";
+				break;
+			}
+			else if (input == number(j) + 1) {
 				converted = asString(j) + "I";
 				break;
 			} else if (input == number(j) - 1) {
