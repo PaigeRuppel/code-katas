@@ -90,7 +90,7 @@ public class DigitToRomanNumeralConverterTest {
 	}
 	
 	@Test
-	public void shouldReturnXXfrom10() {
+	public void shouldReturnXXfrom20() {
 		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
 		String response = underTest.convertDigitToRomanNumerals(20);
 		Assert.assertEquals("XX", response);
