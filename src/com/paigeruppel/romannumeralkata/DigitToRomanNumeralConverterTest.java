@@ -111,37 +111,53 @@ public class DigitToRomanNumeralConverterTest {
 	}
 
 	@Test
-	public void shouldRetrunXXVfrom25() {
+	public void shouldRetutnXXVfrom25() {
 		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
 		String response = underTest.convertDigitToRomanNumerals(25);
 		Assert.assertEquals("XXV", response);
 	}
 
 	@Test
-	public void shouldRetrunXXXVfrom35() {
+	public void shouldRetutnXXXVfrom35() {
 		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
 		String response = underTest.convertDigitToRomanNumerals(35);
 		Assert.assertEquals("XXXV", response);
 	}
 
 	@Test
-	public void shouldRetrunVLfrom45() {
+	public void shouldReturnVLfrom45() {
 		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
 		String response = underTest.convertDigitToRomanNumerals(45);
 		Assert.assertEquals("VL", response);
 	}
 
 	@Test
-	public void shouldRetrunLVfrom55() {
+	public void shouldReturnLVfrom55() {
 		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
 		String response = underTest.convertDigitToRomanNumerals(55);
 		Assert.assertEquals("LV", response);
 	}
 
 	@Test
-	public void shouldRetrunLVIfrom56() {
+	public void shouldReturnLVIfrom56() {
 		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
 		String response = underTest.convertDigitToRomanNumerals(56);
 		Assert.assertEquals("LVI", response);
 	}
+	
+	@Test
+	public void shouldReturnCVIfrom106() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response = underTest.convertDigitToRomanNumerals(106);
+		Assert.assertEquals("CVI", response);
+	}
+	
+	@Test
+	public void shouldReturnCLVIfrom156() {
+		DigitToRomanNumeralConverter underTest = new DigitToRomanNumeralConverter();
+		String response = underTest.convertDigitToRomanNumerals(156);
+		Assert.assertEquals("CLVI", response);
+	}
+	
+	
 }
