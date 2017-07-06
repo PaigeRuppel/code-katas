@@ -1,5 +1,7 @@
 package com.paigeruppel.romannumeralkata;
 
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -157,6 +159,14 @@ public class DigitToRomanNumeralConverterTakeTwoTest {
 		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
 		String response = underTest.convertToRomanNumeral(100);
 		Assert.assertEquals("C", response);
+	}
+	
+	@Test 
+	public void input104ShouldReturnArrayList1_0_4() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		ArrayList<Integer> response = underTest.createArrayList(104);
+		int index0 = response.get(0);
+		Assert.assertEquals(1, index0);	
 	}
 	
 }

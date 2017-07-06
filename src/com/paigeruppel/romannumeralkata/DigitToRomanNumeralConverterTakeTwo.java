@@ -8,26 +8,33 @@ public class DigitToRomanNumeralConverterTakeTwo {
 
 	public String convertToRomanNumeral(int input) {
 		
-		String answer = "";
-		int temp = input;
+		ArrayList<Integer> inputArray = createArrayList(input);
 		
-		ArrayList<Integer> inputArray = new ArrayList<>();
-		do {
-			inputArray.add(0, temp % 10);
-			temp /= 10;
-		} while (temp > 0);
-	
+		String answer = "";
 		
 		if (inputArray.size() == 1) {
-			answer = unitsDigit().get(inputArray.get(0));			
+			answer = unitsToRoman(inputArray, 0);			
 		} else if (inputArray.size() == 2) {
-			answer = tensDigit().get(inputArray.get(0)) + unitsDigit().get(inputArray.get(1));
+			answer = tensToRoman(inputArray, 0) + unitsToRoman(inputArray, 1);	
 		} else if (inputArray.size() == 3) {
-			answer = hundredsDigit().get(inputArray.get(0)) + tensDigit().get(inputArray.get(1)) + unitsDigit().get(inputArray.get(2));
-		}
+			answer = hundredsDigit().get(inputArray.get(0)) + tensToRoman(inputArray, 1) + unitsToRoman(inputArray, 2);	
+		} 
 		
 		return answer;
 	}
+	
+	public ArrayList<Integer> createArrayList(int input) {
+		int temp = input;
+		
+		ArrayList<Integer> createArray = new ArrayList<>();
+		do {
+			createArray.add(0, temp % 10);
+			temp /= 10;
+		} while (temp > 0);
+		
+		return createArray;
+	}
+
 	
 	public static Map<Integer, String> unitsDigit() {
 		Map<Integer, String> unitsDigit = new HashMap<>();
@@ -47,6 +54,11 @@ public class DigitToRomanNumeralConverterTakeTwo {
 		
 	}
 	
+	public String unitsToRoman(ArrayList<Integer> arrayInput, int input) {
+		return unitsDigit().get(arrayInput.get(input));
+	}
+
+	
 	public static Map<Integer, String> tensDigit() {
 		Map<Integer, String> tensDigit = new HashMap<>();
 		
@@ -63,6 +75,10 @@ public class DigitToRomanNumeralConverterTakeTwo {
 		
 		return tensDigit;
 		
+	}
+	
+	public String tensToRoman(ArrayList<Integer> arrayInput, int input) {
+		return tensDigit().get(arrayInput.get(input));
 	}
 	
 	public static Map<Integer, String> hundredsDigit() {
