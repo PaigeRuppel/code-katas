@@ -1,30 +1,31 @@
 package com.paigeruppel.romannumeralkata;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class DigitToRomanNumeralConverterTakeTwo {
 
 	public String convertToRomanNumeral(int input) {
-		String answer = "";
-
-		if (input == 1) {
-			answer = "I";
-		} else if (input == 2) {
-			answer = "II";
-		} else if (input == 3) {
-			answer = "III";
-		} else if (input == 4) {
-			answer = "IV";
-		} else if (input == 5) {
-			answer = "V";
-		} else if (input == 6) {
-			answer = "VI";
-		} else if (input == 7) {
-			answer = "VII";
-		} else if (input == 8) {
-			answer = "VIII";
-		} else if (input == 9) {
-			answer = "IX";
-		}
+		String answer = unitsDigit().get(input);
+		
 		return answer;
+	}
+	
+	public static Map<Integer, String> unitsDigit() {
+		Map<Integer, String> unitsDigit = new HashMap<>();
+		
+		unitsDigit.put(1, "I");
+		unitsDigit.put(2, "II");
+		unitsDigit.put(3, "III");
+		unitsDigit.put(4, "IV");
+		unitsDigit.put(5, "V");
+		unitsDigit.put(6, "VI");
+		unitsDigit.put(7, "VII");
+		unitsDigit.put(8, "VIII");
+		unitsDigit.put(9, "IX");
+		
+		return unitsDigit;
+		
 	}
 
 }
