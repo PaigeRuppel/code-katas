@@ -162,11 +162,18 @@ public class DigitToRomanNumeralConverterTakeTwoTest {
 	}
 	
 	@Test 
-	public void input104ShouldReturnArrayList1_0_4() {
+	public void input104ShouldReturnArrayListIndex0Of1() {
 		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
 		ArrayList<Integer> response = underTest.createArrayList(104);
 		int index0 = response.get(0);
 		Assert.assertEquals(1, index0);	
+	}
+	
+	@Test
+	public void shouldReturnMMVIIIFrom2008() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(2008);
+		Assert.assertEquals("MMVIII", response);
 	}
 	
 }

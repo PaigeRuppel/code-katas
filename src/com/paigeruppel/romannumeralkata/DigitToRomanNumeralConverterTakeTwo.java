@@ -17,8 +17,10 @@ public class DigitToRomanNumeralConverterTakeTwo {
 		} else if (inputArray.size() == 2) {
 			answer = tensToRoman(inputArray, 0) + unitsToRoman(inputArray, 1);	
 		} else if (inputArray.size() == 3) {
-			answer = hundredsDigit().get(inputArray.get(0)) + tensToRoman(inputArray, 1) + unitsToRoman(inputArray, 2);	
-		} 
+			answer = hundredsToRoman(inputArray, 0) + tensToRoman(inputArray, 1) + unitsToRoman(inputArray, 2);	
+		} else if (inputArray.size() == 4) {
+			answer = thousandsToRoman(inputArray, 0) + hundredsToRoman(inputArray, 1) + tensToRoman(inputArray, 2) + unitsToRoman(inputArray, 3);	
+		}
 		
 		return answer;
 	}
@@ -97,6 +99,32 @@ public class DigitToRomanNumeralConverterTakeTwo {
 		
 		return hundredsDigit;
 		
+	}
+	
+	public String hundredsToRoman(ArrayList<Integer> arrayInput, int input) {
+		return hundredsDigit().get(arrayInput.get(input));
+	}
+	
+	public static Map<Integer, String> thousandsDigit() {
+		Map<Integer, String> thousandsDigit = new HashMap<>();
+		
+		thousandsDigit.put(0, "");
+		thousandsDigit.put(1, "M");
+		thousandsDigit.put(2, "MM");
+		thousandsDigit.put(3, "MMM");
+		thousandsDigit.put(4, "MMMM");
+		thousandsDigit.put(5, "MMMMM");
+		thousandsDigit.put(6, "MMMMMM");
+		thousandsDigit.put(7, "MMMMMMM");
+		thousandsDigit.put(8, "MMMMMMMM");
+		thousandsDigit.put(9, "MMMMMMMMM");
+		
+		return thousandsDigit;
+		
+	}
+	
+	public String thousandsToRoman(ArrayList<Integer> arrayInput, int input) {
+		return thousandsDigit().get(arrayInput.get(input));
 	}
 
 }
