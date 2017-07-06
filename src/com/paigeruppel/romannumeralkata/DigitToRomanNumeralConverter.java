@@ -9,6 +9,13 @@ public class DigitToRomanNumeralConverter {
 
 		String converted = "";
 
+		// split to array?
+
+		String temp = Integer.toString(input);
+
+		int[] inputArray = new int[temp.length()];
+
+		
 		for (int j = 6; j >= 0; j--) {
 			if (input == number(j)) {
 				converted = asString(j);
@@ -34,8 +41,7 @@ public class DigitToRomanNumeralConverter {
 			} else if (input == number(j) + 6) {
 				converted = asString(j) + "VI";
 				break;
-			}
-			else if (input == number(j) + 1) {
+			} else if (input == number(j) + 1) {
 				converted = asString(j) + "I";
 				break;
 			} else if (input == number(j) - 1) {
