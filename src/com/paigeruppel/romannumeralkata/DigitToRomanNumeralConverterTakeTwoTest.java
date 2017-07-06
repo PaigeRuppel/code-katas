@@ -68,4 +68,11 @@ public class DigitToRomanNumeralConverterTakeTwoTest {
 		Assert.assertEquals("IX", response);
 	}
 	
+	@Test
+	public void shouldReturnXfrom10() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(10);
+		Assert.assertEquals("X", response);
+	}
+	
 }
