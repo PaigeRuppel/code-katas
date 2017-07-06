@@ -22,6 +22,8 @@ public class DigitToRomanNumeralConverterTakeTwo {
 			answer = unitsDigit().get(inputArray.get(0));			
 		} else if (inputArray.size() == 2) {
 			answer = tensDigit().get(inputArray.get(0)) + unitsDigit().get(inputArray.get(1));
+		} else if (inputArray.size() == 3) {
+			answer = hundredsDigit().get(inputArray.get(0)) + tensDigit().get(inputArray.get(1)) + unitsDigit().get(inputArray.get(2));
 		}
 		
 		return answer;
@@ -48,17 +50,36 @@ public class DigitToRomanNumeralConverterTakeTwo {
 	public static Map<Integer, String> tensDigit() {
 		Map<Integer, String> tensDigit = new HashMap<>();
 		
+		tensDigit.put(0, "");
 		tensDigit.put(1, "X");
 		tensDigit.put(2, "XX");
-//		unitsDigit.put(3, "III");
-//		unitsDigit.put(4, "IV");
-//		unitsDigit.put(5, "V");
-//		unitsDigit.put(6, "VI");
-//		unitsDigit.put(7, "VII");
-//		unitsDigit.put(8, "VIII");
-//		unitsDigit.put(9, "IX");
+		tensDigit.put(3, "XXX");
+		tensDigit.put(4, "XL");
+		tensDigit.put(5, "L");
+		tensDigit.put(6, "LX");
+		tensDigit.put(7, "LXX");
+		tensDigit.put(8, "LXXX");
+		tensDigit.put(9, "XC");
 		
 		return tensDigit;
+		
+	}
+	
+	public static Map<Integer, String> hundredsDigit() {
+		Map<Integer, String> hundredsDigit = new HashMap<>();
+		
+		hundredsDigit.put(0, "");
+		hundredsDigit.put(1, "C");
+		hundredsDigit.put(2, "CC");
+		hundredsDigit.put(3, "CCC");
+		hundredsDigit.put(4, "CD");
+		hundredsDigit.put(5, "D");
+		hundredsDigit.put(6, "DC");
+		hundredsDigit.put(7, "DCC");
+		hundredsDigit.put(8, "DCCC");
+		hundredsDigit.put(9, "CM");
+		
+		return hundredsDigit;
 		
 	}
 
