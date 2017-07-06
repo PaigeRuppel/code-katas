@@ -12,4 +12,11 @@ public class DigitToRomanNumeralConverterTakeTwoTest {
 		Assert.assertEquals("I", response);
 	}
 	
+	@Test
+	public void shouldReturnIIfrom2() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(2);
+		Assert.assertEquals("II", response);
+	}
+	
 }
