@@ -9,6 +9,10 @@ public class DigitToRomanNumeralConverterTakeTwo {
 			answer = "I";
 		} else if (input == 2) {
 			answer = "II";
+		} else if (input == 3) {
+			answer = "III";
+		} else if (input == 4) {
+			answer = "IV";
 		}
 		return answer;
 	}

@@ -19,4 +19,18 @@ public class DigitToRomanNumeralConverterTakeTwoTest {
 		Assert.assertEquals("II", response);
 	}
 	
+	@Test
+	public void shouldReturnIIIfrom3() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(3);
+		Assert.assertEquals("III", response);
+	}
+	
+	@Test
+	public void shouldReturnIVfrom4() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(4);
+		Assert.assertEquals("IV", response);
+	}
+	
 }
