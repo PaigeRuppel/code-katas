@@ -33,4 +33,39 @@ public class DigitToRomanNumeralConverterTakeTwoTest {
 		Assert.assertEquals("IV", response);
 	}
 	
+	@Test
+	public void shouldReturnVfrom5() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(5);
+		Assert.assertEquals("V", response);
+	}
+	
+	@Test
+	public void shouldReturnVIfrom6() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(6);
+		Assert.assertEquals("VI", response);
+	}
+	
+	@Test
+	public void shouldReturnVIIfrom7() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(7);
+		Assert.assertEquals("VII", response);
+	}
+	
+	@Test
+	public void shouldReturnVIIIfrom8() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(8);
+		Assert.assertEquals("VIII", response);
+	}
+	
+	@Test
+	public void shouldReturnIXfrom9() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(9);
+		Assert.assertEquals("IX", response);
+	}
+	
 }
