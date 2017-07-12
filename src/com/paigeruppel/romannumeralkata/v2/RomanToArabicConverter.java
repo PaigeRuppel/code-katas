@@ -17,8 +17,10 @@ public class RomanToArabicConverter {
 			for (int next = 1; next < inputArray.length; next++) {
 				if (romanNumeralValues().get(inputArray[next]) <= romanNumeralValues().get(inputArray[before])) {
 				answer = answer + romanNumeralValues().get(inputArray[next]);
+				before++;
 				} else {
 					answer = romanNumeralValues().get(inputArray[next]) - answer;
+					before++;
 				}
 			}
 		}
