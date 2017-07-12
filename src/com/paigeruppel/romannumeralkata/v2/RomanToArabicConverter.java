@@ -12,7 +12,11 @@ public class RomanToArabicConverter {
 		
 		if (inputArray.length == 1) {
 			answer = romanNumeralValues().get(inputArray[0]);
-		}	
+		}	else {
+			for (int i = 0; i < inputArray.length; i++) {
+				answer = answer + romanNumeralValues().get(inputArray[i]);
+			}
+		}
 
 		return answer;
 	}

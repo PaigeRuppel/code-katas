@@ -13,13 +13,6 @@ public class RomanToArabicConverterTest {
 	}
 	
 //	@Test
-//	public void shouldReturn2() {
-//		RomanToArabicConverter underTest = new RomanToArabicConverter();
-//		int response = underTest.convertToArabic("II");
-//		Assert.assertEquals(2, response);
-//	}
-//	
-//	@Test
 //	public void shouldReturn3() {
 //		RomanToArabicConverter underTest = new RomanToArabicConverter();
 //		int response = underTest.convertToArabic("III");
@@ -74,4 +67,13 @@ public class RomanToArabicConverterTest {
 		int response = underTest.convertToArabic("M");
 		Assert.assertEquals(1000,  response);
 	}
+	
+	@Test
+	public void shouldReturn2() {
+		RomanToArabicConverter underTest = new RomanToArabicConverter();
+		int response = underTest.convertToArabic("II");
+		Assert.assertEquals(2, response);
+	}
+	
+
 }
