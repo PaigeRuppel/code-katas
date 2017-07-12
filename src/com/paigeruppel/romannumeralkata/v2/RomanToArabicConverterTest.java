@@ -83,6 +83,13 @@ public class RomanToArabicConverterTest {
 		Assert.assertEquals(30, response);
 	}
 	
+	@Test
+	public void shouldReturn300() {
+		RomanToArabicConverter underTest = new RomanToArabicConverter();
+		int response = underTest.convertToArabic("CCC");
+		Assert.assertEquals(300, response);
+	}
+	
 	
 
 }
