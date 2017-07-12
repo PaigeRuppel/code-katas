@@ -176,4 +176,19 @@ public class DigitToRomanNumeralConverterTakeTwoTest {
 		Assert.assertEquals("MMVIII", response);
 	}
 	
+	@Test
+	public void shouldReturnMCMLXXXIXfrom1989() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(1989);
+		Assert.assertEquals("MCMLXXXIX", response);
+		
+	}
+	
+	@Test
+	public void shouldReturnXXVIIfrom27() {
+		DigitToRomanNumeralConverterTakeTwo underTest = new DigitToRomanNumeralConverterTakeTwo();
+		String response = underTest.convertToRomanNumeral(27);
+		Assert.assertEquals("XXVII", response);
+	}
+	
 }
