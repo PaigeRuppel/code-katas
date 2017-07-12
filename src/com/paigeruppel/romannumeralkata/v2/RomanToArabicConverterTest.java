@@ -12,14 +12,6 @@ public class RomanToArabicConverterTest {
 		Assert.assertEquals(1, response);
 	}
 	
-
-//	@Test
-//	public void shouldReturn4() {
-//		RomanToArabicConverter underTest = new RomanToArabicConverter();
-//		int response = underTest.convertToArabic("IV");
-//		Assert.assertEquals(4, response);
-//	}
-	
 	@Test
 	public void shouldReturn5() {
 		RomanToArabicConverter underTest = new RomanToArabicConverter();
@@ -88,6 +80,13 @@ public class RomanToArabicConverterTest {
 		RomanToArabicConverter underTest = new RomanToArabicConverter();
 		int response = underTest.convertToArabic("CCC");
 		Assert.assertEquals(300, response);
+	}
+	
+	@Test
+	public void shouldReturn4() {
+		RomanToArabicConverter underTest = new RomanToArabicConverter();
+		int response = underTest.convertToArabic("IV");
+		Assert.assertEquals(4, response);
 	}
 	
 	

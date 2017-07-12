@@ -6,15 +6,16 @@ import java.util.Map;
 public class RomanToArabicConverter {
 
 	public int convertToArabic(String input) {
-		int answer = 0;
+		
 
 		char[] inputArray = input.toCharArray();
 		
-		if (inputArray.length == 1) {
-			answer = romanNumeralValues().get(inputArray[0]);
-		}	else {
-			for (int i = 0; i < inputArray.length; i++) {
-				answer = answer + romanNumeralValues().get(inputArray[i]);
+		int answer =  romanNumeralValues().get(inputArray[0]);
+		
+		if (inputArray.length > 1) {
+			int before = 0;
+			for (int next = 1; next < inputArray.length; next++) {
+				answer = answer + romanNumeralValues().get(inputArray[next]);
 			}
 		}
 
