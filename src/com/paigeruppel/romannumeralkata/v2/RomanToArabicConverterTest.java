@@ -67,4 +67,11 @@ public class RomanToArabicConverterTest {
 		int response = underTest.convertToArabic("D");
 		Assert.assertEquals(500,  response);
 	}
+	
+	@Test
+	public void shouldReturn1000() {
+		RomanToArabicConverter underTest = new RomanToArabicConverter();
+		int response = underTest.convertToArabic("M");
+		Assert.assertEquals(1000,  response);
+	}
 }

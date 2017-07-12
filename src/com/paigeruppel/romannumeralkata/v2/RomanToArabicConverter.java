@@ -26,6 +26,8 @@ public class RomanToArabicConverter {
 		romanNumerals.put('L', 50);
 		romanNumerals.put('C', 100);
 		romanNumerals.put('D', 500);
+		romanNumerals.put('M', 1000);
+		
 		return romanNumerals;
 	}
 }
