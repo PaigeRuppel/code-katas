@@ -11,13 +11,10 @@ public class RomanToArabicConverter {
 
 		int[] rawValues = convertToRawValues(inputArrayChar);
 
-		int answer = 0;
+		int answer = rawValues[0];
 
-		if (rawValues.length == 1) {
-			answer = rawValues[0];
-		} else if (rawValues.length != 1) {
+		if (rawValues.length != 1) {
 			int first = 0;
-			answer = rawValues[0];
 			for (int next = 1; next < rawValues.length; next++) {
 				if (rawValues[next] <= rawValues[first]) {
 					answer = answer + rawValues[next];
