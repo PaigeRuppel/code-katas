@@ -16,7 +16,7 @@ public class RomanToArabicConverter {
 		if (rawValues.length != 1) {
 			int first = 0;
 			for (int next = 1; next < rawValues.length; next++) {
-				if (rawValues[next] <= rawValues[first]) {
+				if (isDescending(rawValues, first, next)) {
 					answer = answer + rawValues[next];
 				} else {
 					answer = (answer - rawValues[first]) + (rawValues[next] - rawValues[first]);
@@ -27,6 +27,10 @@ public class RomanToArabicConverter {
 		return answer;
 	}
 
+	private boolean isDescending(int[] rawValues, int first, int next) {
+		return rawValues[next] <= rawValues[first];
+	}
+
 	private int[] convertToRawValues(char[] inputArrayChar) {
 		int[] rawValues = new int[inputArrayChar.length];
 		for (int index = 0; index < inputArrayChar.length; index++) {
@@ -35,7 +39,7 @@ public class RomanToArabicConverter {
 		return rawValues;
 	}
 
-	public static Map<Character, Integer> romanNumeralValues() {
+	private static Map<Character, Integer> romanNumeralValues() {
 		Map<Character, Integer> romanNumerals = new HashMap<>();
 
 		romanNumerals.put('I', 1);

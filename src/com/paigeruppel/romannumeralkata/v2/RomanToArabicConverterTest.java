@@ -103,6 +103,14 @@ public class RomanToArabicConverterTest {
 		Assert.assertEquals(14, response);
 	}
 	
+	@Test
+	public void shouldReturn1998() {
+		RomanToArabicConverter underTest = new RomanToArabicConverter();
+		int response = underTest.convertToArabic("MCMXCVIII");
+		Assert.assertEquals(1998, response);
+		
+	}
+	
 	
 
 }
