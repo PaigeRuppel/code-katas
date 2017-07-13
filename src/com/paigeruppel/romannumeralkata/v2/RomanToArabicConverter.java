@@ -8,23 +8,30 @@ public class RomanToArabicConverter {
 	public int convertToArabic(String input) {
 		
 
-		char[] inputArray = input.toCharArray();
-		
-		int answer =  romanNumeralValues().get(inputArray[0]);
-		
-		if (inputArray.length > 1) {
-			int before = 0;
-			for (int next = 1; next < inputArray.length; next++) {
-				if (romanNumeralValues().get(inputArray[next]) <= romanNumeralValues().get(inputArray[before])) {
-				answer = answer + romanNumeralValues().get(inputArray[next]);
-				before++;
-				} else {
-					answer = romanNumeralValues().get(inputArray[next]) - answer;
-					before++;
-				}
-			}
+		char[] inputArrayChar = input.toCharArray();
+		int[] rawValues = new int[inputArrayChar.length];
+ 		
+		for (int index = 0; index < inputArrayChar.length; index++) {
+			rawValues[index] = romanNumeralValues().get(inputArrayChar[index]);
 		}
 
+		int answer =0;
+		
+		if (rawValues.length == 1) {
+			answer = rawValues[0];
+		} else if (rawValues.length != 1) {
+			int first = 0;
+			answer =rawValues[0];
+			for (int next = 1; next < rawValues.length; next++) {
+				if (rawValues[next] <= rawValues[first]) {
+					answer = answer + rawValues[next];
+					first++;
+				} else {
+					answer = (answer - rawValues[first]) + (rawValues[next] - rawValues[first]);
+					first++;
+				}	
+			}
+		}
 		return answer;
 	}
 	
